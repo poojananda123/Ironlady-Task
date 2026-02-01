@@ -23,27 +23,52 @@ package com.ironlady.ai.controller;
 //        return service.ask(request.getMessage());
 //    }
 //}
-import org.springframework.web.bind.annotation.*;
-import com.ironlady.ai.model.ChatRequest;
+//import org.springframework.web.bind.annotation.*;
+//import com.ironlady.ai.model.ChatRequest;
+//import com.ironlady.ai.service.OpenAiService;
+//
+//import java.util.Map;
+//
+//@RestController
+//@CrossOrigin
+//public class ChatController {
+//
+//    private final OpenAiService service;
+//
+//    public ChatController(OpenAiService service) {
+//        this.service = service;
+//    }
+//
+//    @PostMapping("/chat")
+//    public Map<String, String> chat(@RequestBody ChatRequest request) {
+//        String reply = service.ask(request.getMessage());
+//
+//        // ✅ return JSON
+//        return Map.of("reply", reply);
+//    }
+//}
+
+
+
+
 import com.ironlady.ai.service.OpenAiService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 
 @RestController
-@CrossOrigin
+@RequestMapping("/chat")
+@CrossOrigin(origins = "*") // allow frontend testing
 public class ChatController {
 
-    private final OpenAiService service;
+    @Autowired
+    private OpenAiService openAiService;
 
-    public ChatController(OpenAiService service) {
-        this.service = service;
-    }
-
-    @PostMapping("/chat")
-    public Map<String, String> chat(@RequestBody ChatRequest request) {
-        String reply = service.ask(request.getMessage());
-
-        // ✅ return JSON
+    @PostMapping
+    public Map<String, String> chat(@RequestBody Map<String, String> request) {
+        String userMessage = request.get("message");
+        String reply = openAiService.ask(userMessage); // real AI call
         return Map.of("reply", reply);
     }
 }
