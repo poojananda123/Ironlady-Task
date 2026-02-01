@@ -124,19 +124,7 @@ Centralized learner management
 
 Scalable for future growth
 
-**📁 Project Structure (High Level)
-├── task1-ai-assistant
-│   ├── controller
-│   ├── service
-│   ├── frontend
-**
-**
-├── task2-learner-management
-│   ├── controller
-│   ├── service
-│   ├── repository
-│   ├── database
-**
+
 **🎯 Final Outcome**
 
 These two solutions together demonstrate:
