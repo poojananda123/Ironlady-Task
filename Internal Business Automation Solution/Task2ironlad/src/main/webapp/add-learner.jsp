@@ -1,0 +1,182 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<%
+if(session.getAttribute("admin") == null){
+    response.sendRedirect("login.jsp");
+    return;
+}
+%>
+<head>
+<meta charset="UTF-8">
+<title>Iron Lady | Add Learner</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f4f6f9;
+}
+
+/* Header */
+.header {
+    background: #1f3c88;
+    padding: 16px 40px;
+    color: white;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* Card Container */
+.container {
+    width: 420px;
+    margin: 60px auto;
+    background: #ffffff;
+    padding: 28px 32px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* Title */
+h2 {
+    margin: 0;
+    text-align: center;
+    color: #333;
+    font-size: 22px;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 22px;
+}
+
+/* Form */
+label {
+    font-weight: 600;
+    display: block;
+    margin-top: 14px;
+    color: #444;
+    font-size: 14px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px 12px;
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+input:focus, select:focus {
+    border-color: #1f3c88;
+    outline: none;
+    box-shadow: 0 0 4px rgba(31,60,136,0.25);
+}
+
+/* Buttons */
+.btn-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 26px;
+}
+
+.btn-primary {
+    flex: 1;
+    background: #1f3c88;
+    color: white;
+    border: none;
+    padding: 11px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background: #162c63;
+}
+
+.btn-secondary {
+    flex: 1;
+    background: #e0e0e0;
+    color: #333;
+    border: none;
+    padding: 11px;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.btn-secondary:hover {
+    background: #cfcfcf;
+}
+
+/* Footer note */
+.note {
+    margin-top: 18px;
+    font-size: 12px;
+    color: #777;
+    text-align: center;
+}
+</style>
+</head>
+
+
+<body>
+
+<div class="header">
+    <h1>IRON LADY – Internal Operations</h1>
+</div>
+
+<div class="container">
+    <h2>Add New Learner</h2>
+    <div class="subtitle">
+        Capture learner details for program tracking
+    </div>
+
+    <form action="add" method="post">
+
+        <label>Full Name</label>
+        <input type="text" name="name" placeholder="Enter learner full name" required>
+
+        <label>Email Address</label>
+        <input type="email" name="email" placeholder="example@email.com" required>
+
+        <label>Phone Number</label>
+        <input type="text" name="phone" placeholder="10-digit mobile number" required>
+
+        <label>Program Interested</label>
+        <input type="text" name="program" placeholder="Java, AI, Full Stack, etc.">
+
+        <label>Current Status</label>
+        <select name="status">
+            <option>Enquired</option>
+            <option>Enrolled</option>
+            <option>Completed</option>
+        </select>
+
+        <div class="btn-group">
+            <button type="submit" class="btn-primary">Save Learner</button>
+            <button type="button" class="btn-secondary"
+                    onclick="window.location.href='view';">
+                Cancel
+            </button>
+        </div>
+    </form>
+
+    <div class="note">
+        Internal use only • Iron Lady Operations
+    </div>
+</div>
+
+</body>
+</html>
