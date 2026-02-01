@@ -124,7 +124,7 @@ Centralized learner management
 
 Scalable for future growth
 
-**📁 Project Structure (High Level)**
+📁 Project Structure (High Level)
 ├── task1-ai-assistant
 │   ├── controller
 │   ├── service
