@@ -1,6 +1,8 @@
-**📌 Task 1: AI-based Customer Interaction Solution
-🤖 Iron Lady AI Assistant
-🔍 Problem Statement**
+**📌 Task 1: AI-based Customer Interaction Solution**
+
+**🤖 Iron Lady AI Assistant**
+
+**🔍 Problem Statement****
 
 Iron Lady receives repeated queries from learners regarding programs, enrollment process, duration, and career support. Handling these queries manually requires significant effort and limits availability outside working hours.
 
@@ -8,7 +10,7 @@ Iron Lady receives repeated queries from learners regarding programs, enrollment
 
 The Iron Lady AI Assistant is a chatbot that provides instant, accurate, and user-friendly responses to learner queries. It enhances the learner journey by offering 24/7 assistance and reducing manual intervention.
 
-⚙️ How the Solution Works
+**⚙️ How the Solution Works**
 
 Users interact with a chat-based UI built using HTML, CSS, and JavaScript
 
@@ -56,9 +58,11 @@ Scalable and cost-effective
 
 Always available support system
 
-**📌 Task 2: Internal Business Automation Solution
-📊 Learner Management System
-🔍 Problem Statement**
+**📌 Task 2: Internal Business Automation Solution**
+
+**📊 Learner Management System**
+
+**🔍 Problem Statement**
 
 Iron Lady’s internal learner data management involves manual tracking using spreadsheets or documents, leading to inefficiencies, data inconsistency, and increased administrative effort.
 
